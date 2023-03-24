@@ -9,9 +9,9 @@ function App() {
 
   const cld = new Cloudinary({
     cloud: {
-      cloud_name: "cloud_name", //Your cloud name
-      upload_preset: "unsigned_upload_preset" //Create an unsigned upload preset and update this
-    }
+      cloud_name: "dhpw5viw9", //Your cloud name
+      upload_preset: "yroufajd", //Create an unsigned upload preset and update this
+    },
   });
 
   const onImageUploadHandler = (publicId) => {
