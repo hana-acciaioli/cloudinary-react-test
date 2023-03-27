@@ -4,10 +4,11 @@ import { quality } from "@cloudinary/url-gen/actions/delivery";
 import { Cloudinary } from "@cloudinary/url-gen";
 
 const CldPhoto = (props) => {
+  console.log("props", props);
   const cld = new Cloudinary({
     cloud: {
-      cloudName: props.cloudName
-    }
+      cloudName: props.cloudName,
+    },
   });
 
   const myImage = cld.image(props.publicId);

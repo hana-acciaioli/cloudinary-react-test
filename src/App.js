@@ -10,11 +10,12 @@ function App() {
   const cld = new Cloudinary({
     cloud: {
       cloud_name: "dhpw5viw9", //Your cloud name
-      upload_preset: "yroufajd", //Create an unsigned upload preset and update this
+      upload_preset: "unsigned_homepage_folder", //Create an unsigned upload preset and update this
     },
   });
 
   const onImageUploadHandler = (publicId) => {
+    console.log("public Id", publicId);
     setImagesUploadedList((prevState) => [...prevState, publicId]);
   };
 

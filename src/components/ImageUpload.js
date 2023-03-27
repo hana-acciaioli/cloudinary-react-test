@@ -9,9 +9,10 @@ const ImageUpload = (props) => {
         uploadPreset: props.upload_preset,
         tags: ["myname"],
         maxImageWidth: 600,
-        sources: ["local", "url", "camera"]
+        sources: ["local", "url", "camera"],
       },
       function (error, result) {
+        console.log("error message:", error);
         if (!error && result.event === "success") {
           props.onImageUpload(result.info.public_id);
         }
